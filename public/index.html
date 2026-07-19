@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pm Store - متجر الإلكترونيات والتجميل</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <span>Pm Store</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span class="logo-text">Pm Store</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">من نحن</a></li>
+                <li><a href="#products" class="nav-link">المنتجات</a></li>
+                <li><a href="#features" class="nav-link">مميزاتنا</a></li>
+                <li><a href="#testimonials" class="nav-link">آراء العملاء</a></li>
+                <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" id="cartBtn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <div id="authArea">
+                    <button class="btn btn-outline btn-sm" id="loginNavBtn">
+                        <i class="fas fa-user"></i> تسجيل الدخول
+                    </button>
+                    <div class="user-menu" id="userMenu" style="display:none;">
+                        <button class="user-menu-btn" id="userMenuBtn">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="userName">مستخدم</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="user-dropdown" id="userDropdown">
+                            <a href="#" id="myOrdersLink"><i class="fas fa-box"></i> طلباتي</a>
+                            <a href="#" id="logoutLink"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fadeInUp">
+                    <i class="fas fa-star"></i> أفضل العروض والمنتجات
+                </div>
+                <h1 class="hero-title animate-fadeInUp delay-1">
+                    مرحباً بكم في <span class="gradient-text">Pm Store</span>
+                </h1>
+                <p class="hero-subtitle animate-fadeInUp delay-2">
+                    وجهزتك للعالم الرقمي - أحدث الإلكترونيات ومستلزمات التجميل بأفضل الأسعار في صنعاء، اليمن
+                </p>
+                <div class="hero-buttons animate-fadeInUp delay-3">
+                    <a href="#products" class="btn btn-primary">
+                        <span>تسوق الآن</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-phone"></i>
+                        <span>تواصل معنا</span>
+                    </a>
+                </div>
+                <div class="hero-stats animate-fadeInUp delay-4">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">عميل سعيد</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">منتج متوفر</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">سنة خبرة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image animate-fadeInLeft delay-2">
+                <div class="hero-img-wrapper">
+                    <div class="hero-img-glow"></div>
+                    <div class="hero-img-placeholder">
+                        <i class="fas fa-mobile-screen-button"></i>
+                        <i class="fas fa-headphones"></i>
+                        <i class="fas fa-laptop"></i>
+                        <i class="fas fa-camera"></i>
+                    </div>
+                </div>
+                <div class="floating-card card-1 animate-float">
+                    <i class="fas fa-truck-fast"></i>
+                    <span>شحن سريع</span>
+                </div>
+                <div class="floating-card card-2 animate-float delay-2">
+                    <i class="fas fa-shield-halved"></i>
+                    <span>ضمان أصلي</span>
+                </div>
+                <div class="floating-card card-3 animate-float delay-4">
+                    <i class="fas fa-percent"></i>
+                    <span>خصومات حصرية</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <a href="#about">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">تصفح الأقسام</span>
+                <h2 class="section-title animate-on-scroll">أقسامنا <span class="gradient-text">المميزة</span></h2>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card animate-on-scroll" data-category="phones">
+                    <div class="category-icon"><i class="fas fa-mobile-screen-button"></i></div>
+                    <h3>الهواتف الذكية</h3>
+                    <p>أحدث الهواتف من أشهر العلامات التجارية</p>
+                    <span class="category-count">45+ منتج</span>
+                </div>
+                <div class="category-card animate-on-scroll" data-category="laptops">
+                    <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>الحاسبات المحمولة</h3>
+                    <p>لابتوبات للعمل والألعاب بأقوى المواصفات</p>
+                    <span class="category-count">30+ منتج</span>
+                </div>
+                <div class="category-card animate-on-scroll" data-category="audio">
+                    <div class="category-icon"><i class="fas fa-headphones"></i></div>
+                    <h3>السماعات</h3>
+                    <p>سماعات لاسلكية وبلوتوث بجودة عالية</p>
+                    <span class="category-count">50+ منتج</span>
+                </div>
+                <div class="category-card animate-on-scroll" data-category="beauty">
+                    <div class="category-icon"><i class="fas fa-spa"></i></div>
+                    <h3>العناية بالبشرة</h3>
+                    <p>مستلزمات التجميل والعناية بالبشرة</p>
+                    <span class="category-count">60+ منتج</span>
+                </div>
+                <div class="category-card animate-on-scroll" data-category="accessories">
+                    <div class="category-icon"><i class="fas fa-plug"></i></div>
+                    <h3>الملحقات</h3>
+                    <p>شواحن وأغطية وملحقات إلكترونية</p>
+                    <span class="category-count">80+ منتج</span>
+                </div>
+                <div class="category-card animate-on-scroll" data-category="smart">
+                    <div class="category-icon"><i class="fas fa-clock"></i></div>
+                    <h3>الساعات الذكية</h3>
+                    <p>ساعات ذكية بأحدث التقنيات</p>
+                    <span class="category-count">25+ منتج</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-image animate-on-scroll">
+                <div class="about-img-wrapper">
+                    <div class="about-img-placeholder">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="about-experience">
+                        <span class="exp-number">10+</span>
+                        <span class="exp-text">سنوات خبرة</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content animate-on-scroll">
+                <span class="section-tag">من نحن</span>
+                <h2 class="section-title">نحن <span class="gradient-text">Pm Store</span></h2>
+                <p class="about-text">
+                    متجر Pm Store هو وجهزتك المثالية للحصول على أحدث المنتجات الإلكترونية ومستلزمات التجميل في صنعاء، اليمن. نقدم لك تشكيلة واسعة من الهواتف الذكية، الحاسبات المحمولة، السماعات، والمنتجات التجميلية بأسعار تنافسية وجودة مضمونة.
+                </p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4>منتجات أصلية 100%</h4>
+                            <p>جميع منتجاتنا أصلية مع ضمان رسمي</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4>أسعار تنافسية</h4>
+                            <p>نقدم أفضل الأسعار في السوق اليمني</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                        <div>
+                            <h4>خدمة عملاء متميزة</h4>
+                            <p>فريق دعم متواجد على مدار الساعة</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#products" class="btn btn-primary">
+                    <span>اكتشف منتجاتنا</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">تشكيلتنا</span>
+                <h2 class="section-title animate-on-scroll">أحدث <span class="gradient-text">المنتجات</span></h2>
+                <p class="section-desc animate-on-scroll">اكتشف تشكيلتنا المتنوعة من المنتجات الإلكترونية والتجميلية</p>
+            </div>
+            <div class="products-filter animate-on-scroll">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="phones">هواتف</button>
+                <button class="filter-btn" data-filter="laptops">لابتوبات</button>
+                <button class="filter-btn" data-filter="audio">سماعات</button>
+                <button class="filter-btn" data-filter="beauty">تجميل</button>
+                <button class="filter-btn" data-filter="accessories">ملحقات</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <div class="products-loading" style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray-light);">
+                    <i class="fas fa-spinner fa-spin"></i> جاري تحميل المنتجات...
+                </div>
+            </div>
+            <div class="products-more animate-on-scroll">
+                <a href="#" class="btn btn-outline btn-lg">
+                    عرض جميع المنتجات
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">لماذا نحن</span>
+                <h2 class="section-title animate-on-scroll">مميزات <span class="gradient-text">اختيارنا</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    </div>
+                    <h3>شحن سريع</h3>
+                    <p>توصيل مجاني لجميع أنحاء صنعاء خلال 24 ساعة</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+                    </div>
+                    <h3>ضمان أصلي</h3>
+                    <p>جميع منتجاتنا أصلية مع ضمان سنة كاملة</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                    </div>
+                    <h3>دفع آمن</h3>
+                    <p>طرق دفع متعددة وآمنة عند الاستلام</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    </div>
+                    <h3>دعم فني 24/7</h3>
+                    <p>فريق دعم متواجد على مدار الساعة لمساعدتك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag animate-on-scroll">آراء العملاء</span>
+                <h2 class="section-title animate-on-scroll">ماذا يقول <span class="gradient-text">عملاؤنا</span></h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"منتجات أصلية وأسعار ممتازة! تم توصيل طلبي خلال يوم واحد. أنصح بالتعامل معهم بشدة."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h4>أحمد محمد</h4>
+                                <span>صنعاء</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"أفضل متجر إلكترونيات في صنعاء. خدمة العملاء ممتازة والمنتجات مضمونة. شكراً Pm Store!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h4>سارة علي</h4>
+                                <span>صنعاء</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">"اشتريت آيفون 15 برو والجهاز ممتاز جداً. التغليف جميل والشحن كان سريع جداً."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><i class="fas fa-user"></i></div>
+                            <div>
+                                <h4>خالد الحمادي</h4>
+                                <span>صنعاء</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-btn prev" id="prevBtn"><i class="fas fa-chevron-right"></i></button>
+                    <button class="testimonial-btn next" id="nextBtn"><i class="fas fa-chevron-left"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>هل أنت مستعد للتسوق؟</h2>
+                <p>احصل على خصم 10% على طلبك الأول مع كود: <strong>PMSTORE10</strong></p>
+                <a href="#products" class="btn btn-primary btn-lg">
+                    <span>تسوق الآن</span>
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-info animate-on-scroll">
+                <span class="section-tag">تواصل معنا</span>
+                <h2 class="section-title">نحن هنا <span class="gradient-text">لمساعدتك</span></h2>
+                <p class="contact-desc">لا تتردد في التواصل معنا لأي استفسار أو طلب. فريقنا جاهز لمساعدتك!</p>
+                <div class="contact-items">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <h4>العنوان</h4>
+                            <p>صنعاء، اليمن</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>الهاتف</h4>
+                            <p dir="ltr">780 402 502</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>البريد الإلكتروني</h4>
+                            <p>info@pmstore.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>ساعات العمل</h4>
+                            <p>السبت - الخميس: 9 ص - 10 م</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="contact-form animate-on-scroll">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="رقم الهاتف" dir="ltr">
+                    </div>
+                    <div class="form-group">
+                        <select id="subject">
+                            <option value="">اختر الموضوع</option>
+                            <option value="order">استفسار عن طلب</option>
+                            <option value="product">استفسار عن منتج</option>
+                            <option value="complaint">شكوى</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="رسالتك..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">
+                        <span>إرسال الرسالة</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                        <span class="logo-text">Pm Store</span>
+                    </a>
+                    <p>متجرك المثالي للإلكترونيات والتجميل في صنعاء، اليمن. نقدم لك أفضل المنتجات بأسعار تنافسية.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>الأقسام</h3>
+                    <ul>
+                        <li><a href="#">الهواتف الذكية</a></li>
+                        <li><a href="#">الحاسبات المحمولة</a></li>
+                        <li><a href="#">السماعات</a></li>
+                        <li><a href="#">العناية بالبشرة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-location-dot"></i> صنعاء، اليمن</li>
+                        <li><i class="fas fa-phone"></i> <span dir="ltr">780 402 502</span></li>
+                        <li><i class="fas fa-envelope"></i> info@pmstore.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pm Store. جميع الحقوق محفوظة.</p>
+                <a href="/admin" class="admin-link"><i class="fas fa-lock"></i> دخول الإدارة</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> سلة التسوق</h3>
+            <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>سلتك فارغة</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display:none;">
+            <div class="cart-total">
+                <span>الإجمالي:</span>
+                <span id="cartTotal">$0</span>
+            </div>
+            <button id="checkoutBtn" class="btn btn-primary btn-block">
+                <i class="fas fa-credit-card"></i> إتمام الطلب
+            </button>
+        </div>
+    </div>
+
+    <!-- Auth Modals -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal">
+            <button class="modal-close" id="authModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3 id="authTitle">تسجيل الدخول</h3>
+            </div>
+            <div class="modal-body">
+                <form id="authForm">
+                    <div class="form-group" id="nameField" style="display:none;">
+                        <input type="text" id="authName" placeholder="الاسم الكامل">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="authEmail" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group" id="phoneField" style="display:none;">
+                        <input type="tel" id="authPhone" placeholder="رقم الهاتف" dir="ltr">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="authPassword" placeholder="كلمة المرور" required>
+                    </div>
+                    <div class="auth-error" id="authError"></div>
+                    <button type="submit" class="btn btn-primary btn-block" id="authSubmit">دخول</button>
+                </form>
+                <p class="auth-switch" id="authSwitch">
+                    ليس لديك حساب؟ <a href="#" id="authSwitchLink">إنشاء حساب</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Orders Modal -->
+    <div class="modal-overlay" id="ordersModal">
+        <div class="modal modal-lg">
+            <button class="modal-close" id="ordersModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header">
+                <h3>طلباتي</h3>
+            </div>
+            <div class="modal-body" id="ordersList">
+                <p class="text-muted">لا توجد طلبات بعد.</p>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="js/main.js"></script>
+    <script defer src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pm Store - لوحة الإدارة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="loginScreen" class="admin-login">
+        <div class="login-card">
+            <div class="login-logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span>Pm Store</span>
+            </div>
+            <h2>دخول الإدارة</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <input type="email" id="adminEmail" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="adminPassword" placeholder="كلمة المرور" required>
+                </div>
+                <div class="admin-error" id="adminLoginError"></div>
+                <button type="submit" class="btn btn-primary btn-block">دخول</button>
+            </form>
+            <p class="login-hint">الحساب الافتراضي: admin@pmstore.com / admin123</p>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="admin-dashboard" style="display:none;">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-icon"><i class="fas fa-bolt"></i></span>
+                <span>Pm Store</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-tab="products"><i class="fas fa-box"></i> المنتجات</a>
+                <a href="#" class="nav-item" data-tab="orders"><i class="fas fa-shopping-cart"></i> الطلبات</a>
+            </nav>
+            <button class="btn btn-outline btn-block logout-btn" id="adminLogout"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1 id="pageTitle">إدارة المنتجات</h1>
+                <button class="btn btn-primary" id="addProductBtn"><i class="fas fa-plus"></i> إضافة منتج</button>
+            </header>
+
+            <!-- Products Tab -->
+            <section class="tab-content active" id="productsTab">
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>الصورة</th>
+                                <th>الاسم</th>
+                                <th>القسم</th>
+                                <th>السعر</th>
+                                <th>التقييم</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Orders Tab -->
+            <section class="tab-content" id="ordersTab">
+                <div class="table-wrapper">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>العميل</th>
+                                <th>الهاتف</th>
+                                <th>المنتجات</th>
+                                <th>الإجمالي</th>
+                                <th>الحالة</th>
+                                <th>التاريخ</th>
+                                <th>إجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ordersTableBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal-overlay" id="productModal">
+        <div class="modal">
+            <button class="modal-close" id="productModalClose"><i class="fas fa-times"></i></button>
+            <div class="modal-header"><h3 id="productModalTitle">إضافة منتج</h3></div>
+            <div class="modal-body">
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    <div class="form-group">
+                        <label>اسم المنتج</label>
+                        <input type="text" id="pName" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>القسم</label>
+                            <select id="pCategory">
+                                <option value="phones">هواتف</option>
+                                <option value="laptops">لابتوبات</option>
+                                <option value="audio">سماعات</option>
+                                <option value="beauty">تجميل</option>
+                                <option value="accessories">ملحقات</option>
+                                <option value="smart">ساعات ذكية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>الأيقونة (FontAwesome)</label>
+                            <input type="text" id="pIcon" value="fas fa-box" placeholder="fas fa-mobile-screen-button">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>السعر ($)</label>
+                            <input type="number" id="pPrice" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label>السعر القديم ($)</label>
+                            <input type="number" id="pOldPrice" step="0.01">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>الشارة</label>
+                            <select id="pBadge">
+                                <option value="">بدون</option>
+                                <option value="sale">خصم</option>
+                                <option value="new">جديد</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>التقييم</label>
+                            <input type="number" id="pRating" step="0.1" min="0" max="5" value="5">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>الوصف</label>
+                        <textarea id="pDescription" rows="3"></textarea>
+                    </div>
+                    <div class="admin-error" id="productFormError"></div>
+                    <button type="submit" class="btn btn-primary btn-block">حفظ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script defer src="js/admin.js"></script>
+</body>
+</html>
